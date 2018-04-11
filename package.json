@@ -1,0 +1,11 @@
+{
+  "name": "adventure-maus",
+  "version": "0.1.0",
+  "description": "A game about a mouse and his ship.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
