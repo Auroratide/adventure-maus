@@ -15,6 +15,7 @@ class Asset {
 export default {
   images: {
     boat: new Asset('assets/images/boat.png'),
-    water: new Asset('assets/images/water.png')
+    water: new Asset('assets/images/water.png'),
+    button: new Asset('assets/images/button.png')
   }
 };
