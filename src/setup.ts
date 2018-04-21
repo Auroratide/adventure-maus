@@ -2,7 +2,20 @@ import * as PIXI from 'pixi.js';
 import app from './app';
 import assets from './assets';
 
+import Boat from './sprites/Boat'
+import Water from './sprites/Water'
+
 export default () => {
-  let sprite = new PIXI.Sprite(assets.images.boat.texture());
-  app.stage.addChild(sprite);
+  const boat = new Boat();
+  const foreWater = new Water();
+  const backWater = new Water();
+
+  foreWater.position.set(0, 300);
+  backWater.position.set(100, 250);
+  backWater.scale.set(0.8, 0.8);
+  boat.position.set(0, 150);
+
+  app.stage.addChild(backWater);
+  app.stage.addChild(boat);
+  app.stage.addChild(foreWater);
 };
