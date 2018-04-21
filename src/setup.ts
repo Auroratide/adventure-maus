@@ -2,8 +2,12 @@ import * as PIXI from 'pixi.js';
 import app from './app';
 import assets from './assets';
 
-import Boat from './sprites/Boat'
-import Water from './sprites/Water'
+import Boat from './sprites/Boat';
+import Water from './sprites/Water';
+
+const gameLoop = (boat:Boat) => (delta:Number) => {
+  boat.x += 1;
+};
 
 export default () => {
   const boat = new Boat();
@@ -18,4 +22,6 @@ export default () => {
   app.stage.addChild(backWater);
   app.stage.addChild(boat);
   app.stage.addChild(foreWater);
+
+  app.ticker.add(gameLoop(boat));
 };
